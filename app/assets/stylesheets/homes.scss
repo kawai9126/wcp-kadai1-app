@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+h1, p, a {
+    font-family: verdana, arial, helvetica, sans-serif;
+}
+
 h1 {
     padding: 30px;
 
@@ -16,10 +20,10 @@ strong {
     font-weight:900;
 }
 
-p {
+p{
     margin:0px 0px 30px 70px;
 }
 
-p:first-child{
-    margin-top: 0;
+a {
+    margin-left:70px;
 }
