@@ -43,7 +43,7 @@ thead {
     border-color: inherit;
 }
 
-th {
+label {
     display: table-cell;
     vertical-aline: inherit;
     font-weight: bold;
@@ -78,15 +78,13 @@ h2 {
     font-weight: bold;
 }
 
+h4 {
+    display: block;
+    margin-top: 10px;
+}
+
 div {
     display: block;
-}
-
-.field {
-    margin-bottom: 10px;
-}
-
-label {
-    display: block;
+    margin-top: 10px;
 }
 

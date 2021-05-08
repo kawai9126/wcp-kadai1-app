@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <head>
   <body>
-    <p id="notice"></p>
     <h1>Books</h1>
-    <table>
+      <table>
       <thead>
         <th>title</th>
         <th>body</th>
@@ -38,20 +37,24 @@
           <td></td>
           <td></td>
         </tr>
+        <% @books.each do |book| %>
+        <tr>
+          <td><%= book.title %></td>
+          <td><%= book.body %></td>
+        </tr>
+        <% end %>
       </tbody>
     </table>
+
     <h2>New book</h2>
-    <form>
-      <div class="field">
-        <label for="book_title" type="text" name="book[title]" id="book_title">Title</label>
-        <input class="book_title">
+  <%= form_with model:@book, local:true do |f| %>
+      <h4>title</h4>
+      <%= f.text_field :title %>
+      <h4>Body</h4>
+      <%= f.text_area :body %>
+      <div>
+        <%= f.submit 'Create book' %>
       </div>
-      <div class="field">
-        <label for="book_body">Body</label>
-        <textarea class="book_body" name="book[body]"　id="book_body"></textarea>
-      </div>
-      <div class="action">
-        <input type="submit" name="commit" value="Create book" data-disable-whit="Create book">
-      </div>
+  <% end %>
   </body>
 </head>
