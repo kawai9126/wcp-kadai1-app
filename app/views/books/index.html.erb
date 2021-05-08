@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<head>
+<html lang="ja">
   <body>
     <h1>Books</h1>
       <table>
@@ -41,13 +41,22 @@
         <tr>
           <td><%= book.title %></td>
           <td><%= book.body %></td>
+          <td>
+          <%= link_to 'Show', book_path(book.id) %>
+          </td>
+          <td>
+            <a>Edit</a>
+          </td>
+          <td>
+            <a>Destroy</a>
+          </td>
         </tr>
         <% end %>
       </tbody>
     </table>
 
     <h2>New book</h2>
-  <%= form_with model:@book, local:true do |f| %>
+    <%= form_with model:@book, local:true do |f| %>
       <h4>title</h4>
       <%= f.text_field :title %>
       <h4>Body</h4>
@@ -55,6 +64,6 @@
       <div>
         <%= f.submit 'Create book' %>
       </div>
-  <% end %>
+    <% end %>
   </body>
-</head>
+</html>
