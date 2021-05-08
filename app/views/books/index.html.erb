@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
   <body>
+    <p id="notice"></p>
     <h1>Books</h1>
     <table>
       <thead>
@@ -9,18 +10,48 @@
         <th colspan="no"></th>
       </thead>
       <tbody>
+        <tr>
+          <td>リーダブルコード</td>
+          <td>より良いコードを書くためのシンプルな実践テクニック</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>トラブル知らずのシステム設計</td>
+          <td>システムの要点を使いで仮説してくれます</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>楽しいRuby</td>
+          <td>Rubyの入門におすすめです</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>入門Git</td>
+          <td>gitについて基本操作から内部構造まで解説してくれます</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
       </tbody>
     </table>
     <h2>New book</h2>
     <form>
-      <div class="newbook">
-        <label for="book_title">Title</label>
+      <div class="field">
+        <label for="book_title" type="text" name="book[title]" id="book_title">Title</label>
         <input class="book_title">
       </div>
-      <div class="newbook">
+      <div class="field">
         <label for="book_body">Body</label>
-        <textarea class="book_body"></textarea>
+        <textarea class="book_body" name="book[body]"　id="book_body"></textarea>
       </div>
-      <div class="action"></div>
+      <div class="action">
+        <input type="submit" name="commit" value="Create book" data-disable-whit="Create book">
+      </div>
   </body>
 </head>
