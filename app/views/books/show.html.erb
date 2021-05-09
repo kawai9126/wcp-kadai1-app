@@ -3,13 +3,14 @@
   <head>
   </head>
   <body class="show-body">
-    <div class="div-show">
-      <h2>title:</h2>
-      <p class="p-show"><%= @book.title %></p>
-    </div>
-    <div class="div-show">
-      <h2>body:</h2>
-      <p class="p-show"><%= @book.body %></p>
+    <p class="p-show">
+      <strong>title: </strong><%= @book.body %>
+    </p>
+    <p class="p-show">
+      <strong>body: </strong><%= @book.body %>
+    </p>
+    <div>
+      <%= link_to 'Edit', edit_book_path(@book.id) %><span>|</span><%= link_to 'back', books_path %>
     </div>
   </body>
 </html>
