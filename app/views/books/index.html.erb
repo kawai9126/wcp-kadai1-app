@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <body>
+
     <h1>Books</h1>
       <table>
       <thead>
@@ -45,10 +43,10 @@
           <%= link_to 'Show', book_path(book.id) %>
           </td>
           <td>
-            <a>Edit</a>
+            <%= link_to 'Edit', edit_book_path(book.id) %>
           </td>
           <td>
-            <a>Destroy</a>
+            <%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure?？" %>
           </td>
         </tr>
         <% end %>
@@ -65,5 +63,3 @@
         <%= f.submit 'Create book' %>
       </div>
     <% end %>
-  </body>
-</html>

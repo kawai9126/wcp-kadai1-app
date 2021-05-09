@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-  </head>
-  <body class="show-body">
+
+
     <p class="p-show">
-      <strong>title: </strong><%= @book.body %>
+      <strong>title: </strong><%= @book.title %>
     </p>
     <p class="p-show">
       <strong>body: </strong><%= @book.body %>
@@ -12,5 +9,4 @@
     <div>
       <%= link_to 'Edit', edit_book_path(@book.id) %><span>|</span><%= link_to 'back', books_path %>
     </div>
-  </body>
-</html>
+
