@@ -28,7 +28,13 @@
     </table>
 
     <h2>New book</h2>
-    <%= form_with model:@book, local:true do |f| %>
+     <%= form_with model:@book, local:true do |f| %>
+    <% if @book.errors.any? %>
+    <%= @book.errors.count %>error
+    <% @book.errors.full_messages.each do |message| %>
+    <%= message %>
+    <% end %>
+    <% end %>
       <h4>title</h4>
       <%= f.text_field :title %>
       <h4>Body</h4>
