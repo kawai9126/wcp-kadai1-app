@@ -4,6 +4,10 @@ class HomesController < ApplicationController
 
   end
 
+  def top
+    
+  end
+
   def show
   end
 
