@@ -6,7 +6,13 @@
     <p class="p-show">
       <strong>body: </strong><%= @book.body %>
     </p>
-    <div>
-      <%= link_to 'Edit', edit_book_path(@book.id) %><span>|</span><%= link_to 'back', books_path %>
-    </div>
+    <p class="p-">
+    <%= link_to 'Edit', edit_book_path(@book.id) %>
+    </p>
+    |
+    <p class"p-">
+    <%= link_to 'back', books_path %>
+    </p>
+
+
 
